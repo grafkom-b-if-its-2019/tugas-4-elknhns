@@ -361,7 +361,7 @@
 
     // Membuat mekanisme pembacaan gambar jadi tekstur
     function initTexture(texture) {
-      var imageSource = 'images/txStainglass.bmp';
+      var imageSource = 'images/merge.png';
       var image = new Image();
       if (!image) {
         reject(new Error('Gagal membuat objek gambar'));
