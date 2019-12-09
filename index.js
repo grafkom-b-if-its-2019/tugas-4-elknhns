@@ -7,7 +7,7 @@
   var gl = glUtils.checkWebGL(canvas);
 
   var scale = 0;
-  var adder = 0.0135;
+  var adder = 0.0127;
 
 
 
@@ -242,7 +242,7 @@
       var ambientColorLoc = gl.getUniformLocation(program, 'ambientColor');
       var lightColor = [0.5,0.5, 0.5];
       var lightPosition = [translate[0], translate[1], -2+translate[2]];
-      var ambientColor = glMatrix.vec3.fromValues(0.17,0.41, 0.35);
+      var ambientColor = glMatrix.vec3.fromValues(0.17,0.41, 0.27);
       gl.uniform3fv(lightColorLoc, lightColor);
       gl.uniform3fv(lightPositionLoc, lightPosition);
       gl.uniform3fv(ambientColorLoc, ambientColor);
@@ -270,10 +270,10 @@
         );
 
         if (scale > 1){
-          adder = -0.0135
+          adder = -0.0127
         }
         else if (scale < -1){
-          adder = 0.0135
+          adder = 0.0127
         }
         
         scale += adder;
